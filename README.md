@@ -1,3 +1,4 @@
+[![Go Report Card](https://goreportcard.com/badge/github.com/nightstory/go-mod-godoc)](https://goreportcard.com/report/github.com/nightstory/go-mod-godoc) [![GoDoc](https://godoc.org/github.com/nightstory/go-mod-godoc?status.svg)](https://godoc.org/github.com/nightstory/go-mod-godoc) [![GitHub license](https://img.shields.io/github/license/nightstory/go-mod-godoc)](https://github.com/nightstory/go-mod-godoc/blob/master/LICENSE)
 # Go Modules godoc workaround
 More about this issue: https://github.com/golang/go/issues/26827
 
