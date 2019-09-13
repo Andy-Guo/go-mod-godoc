@@ -8,7 +8,7 @@ I wrote this workaround to simply host local version of a godoc in the Docker co
 
 ## Prepare
 1. Fill in [`.env`](https://github.com/nightstory/go-mod-godoc/blob/master/.env), see more in the file.
-2. [_not required_] Fill in [`replacer.json`](https://github.com/nightstory/go-mod-godoc/blob/master/replacer.json), it's very simple to do: 
+2. _`not required`_ Fill in [`replacer.json`](https://github.com/nightstory/go-mod-godoc/blob/master/replacer.json), it's very simple to do: 
     - File contains a JSON array with replacement rules;
     - All `*.html` files (_downloaded by `wget`_) contents will be processed with these rules;
     - `key` is what to replace;
