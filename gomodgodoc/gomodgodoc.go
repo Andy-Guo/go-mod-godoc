@@ -40,7 +40,7 @@ func Start(docsDir string, godocPort int, waitTime time.Duration, replacerConfig
 	}
 
 	go func() {
-		fmt.Printf("[sleeping %ds until godoc is ready] ...", waitTime)
+		fmt.Println("[sleeping until godoc is ready] ...")
 		time.Sleep(waitTime)
 		fmt.Println("[wget site downloading] starting...")
 		url := fmt.Sprintf("http://localhost:%d/pkg/%s", godocPort, projectModule)
@@ -70,12 +70,12 @@ func Start(docsDir string, godocPort int, waitTime time.Duration, replacerConfig
 func runReplacer(docsDir string, replacerConfigFilePath string, replacerFilesPattern string) error {
 	bytes, err := readFile(replacerConfigFilePath)
 	if err != nil {
-		return nil
+		return err
 	}
 
 	var replaceSettings []replaceSetting
 	if err := json.Unmarshal(bytes, &replaceSettings); err != nil {
-		return nil
+		return err
 	}
 
 	replacer := newContentReplacer(replaceSettings, placeholdersFromEnv())

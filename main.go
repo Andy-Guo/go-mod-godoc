@@ -8,9 +8,9 @@ import (
 )
 
 const (
-	docsDir                = "docs"
+	docsDir                = "/app/docs"
 	replacerFilesPattern   = "*.html"
-	replacerConfigFilePath = "../replacer.json"
+	replacerConfigFilePath = "/app/replacer.json"
 	godocPort              = 6060
 
 	// it is necessary to wait some time
@@ -19,5 +19,5 @@ const (
 )
 
 func main() {
-	gomodgodoc.Start(docsDir, godocPort, waitTime, replacerFilesPattern, replacerConfigFilePath)
+	gomodgodoc.Start(docsDir, godocPort, waitTime, replacerConfigFilePath, replacerFilesPattern)
 }
