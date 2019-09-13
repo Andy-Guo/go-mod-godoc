@@ -15,7 +15,7 @@ const (
 
 	// it is necessary to wait some time
 	// while `godoc -http=:PORT` is starting
-	waitTime               = 2 * time.Second
+	waitTime = 2 * time.Second
 )
 
 func main() {

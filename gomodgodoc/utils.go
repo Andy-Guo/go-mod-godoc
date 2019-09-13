@@ -57,7 +57,7 @@ func placeholdersFromEnv() map[string]string {
 		k := kv[0]
 
 		if strings.HasPrefix(k, "PLACEHOLDER_") {
-			result[fmt.Sprintf("${%s}", substring(k, 12, len(k) - 12))] = kv[1]
+			result[fmt.Sprintf("${%s}", substring(k, 12, len(k)-12))] = kv[1]
 		}
 	}
 	return result
