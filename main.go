@@ -3,7 +3,7 @@ package main
 
 import (
 	_ "github.com/joho/godotenv/autoload"
-	"github.com/nightstory/go-mod-godoc/gomodgodoc"
+	"github.com/nightstory/go-mod-godoc"
 	"time"
 )
 

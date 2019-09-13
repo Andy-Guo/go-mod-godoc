@@ -7,12 +7,15 @@ RUN go get golang.org/x/tools/cmd/godoc
 RUN which godoc && which wget
 
 RUN mkdir -p /app/docs
+RUN mkdir -p /app/gomodgodoc
 WORKDIR /app
 
 COPY go.mod go.sum ./
+COPY gomodgodoc/go.mod ./gomodgodoc
 RUN go mod download
 
-COPY main.go replacer.go utils.go replacer.json .env ./
+COPY main.go replacer.json .env ./
+COPY gomodgodoc/replacer.go gomodgodoc/utils.go gomodgodoc/gomodgodoc.go ./gomodgodoc/
 
 RUN go build -o main .
 
