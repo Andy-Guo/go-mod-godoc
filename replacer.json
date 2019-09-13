@@ -1,0 +1,77 @@
+[
+  {
+    "regex": false,
+    "key": "http://localhost:6060/blog/",
+    "value": "https://golang.org/blog/"
+  },
+  {
+    "regex": false,
+    "key": "http://localhost:6060/doc/",
+    "value": "https://golang.org/doc/"
+  },
+  {
+    "regex": false,
+    "key": "http://localhost:6060/project/",
+    "value": "https://golang.org/project/"
+  },
+  {
+    "regex": false,
+    "key": "http://localhost:6060/help/",
+    "value": "https://golang.org/help/"
+  },
+  {
+    "regex": false,
+    "key": "http://localhost:6060/LICENSE",
+    "value": "https://golang.org/LICENSE"
+  },
+  {
+    "regex": false,
+    "key": "http://localhost:6060/doc/tos.html",
+    "value": "https://golang.org/doc/tos.html"
+  },
+  {
+    "regex": false,
+    "key": "http://localhost:6060/search",
+    "value": "https://godoc.org/"
+  },
+  {
+    "regex": false,
+    "key": "http://localhost:6060/pkg",
+    "value": "https://godoc.org"
+  },
+  {
+    "regex": false,
+    "key": "http://localhost:6060/src/${MODULE_NAME}",
+    "value": "${PROJECT_SOURCES_PREFIX}"
+  },
+  {
+    "regex": false,
+    "key": "and code is licensed under a",
+    "value": "and code (except all <a href=\"${PROJECT_URL}\">${PROJECT_NAME}</a> intellectual property) is licensed under a"
+  },
+  {
+    "regex": false,
+    "key": "<div class=\"top-heading\" id=\"heading-wide\"><a href=\"http://localhost:6060/\">The Go Programming Language</a></div>",
+    "value": "<div class=\"top-heading\" id=\"heading-wide\"><a href=\"${PROJECT_URL}/\">${PROJECT_NAME}</a> × <a href=\"https://golang.org/\">The Go Programming Language</a></div>"
+  },
+  {
+    "regex": false,
+    "key": "\n<div class=\"top-heading\" id=\"heading-narrow\"><a href=\"http://localhost:6060/\">Go</a></div>\n",
+    "value": "\n"
+  },
+  {
+    "regex": false,
+    "key": "\n<a href=\"https://golang.org/doc/\">Documents</a>\n",
+    "value": "\n<a href=\"${PROJECT_URL}\" target=\"_blank\">${PROJECT_NAME}</a>\n"
+  },
+  {
+    "regex": true,
+    "key": "<title>(.+) - The Go Programming Language</title>",
+    "value": "<title>$1 — ${PROJECT_NAME} × Go — documentation</title>"
+  },
+  {
+    "regex": true,
+    "key": "(?s)<div id=\"footer\">(.*)</div>",
+    "value": "<div id=\"footer\"><b><a href=\"${PROJECT_URL}\">${PROJECT_URL}</a> license is available <a href=\"${PROJECT_LICENSE}\">here</a></b><br><br>$1</div>"
+  }
+]

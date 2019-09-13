@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  go_mod_godoc_workaround:
+    image: go_mod_godoc_workaround
+    container_name: go_mod_godoc_workaround
+    restart: always
+    build:
+      network: host
+      context: .
+      dockerfile: ./Dockerfile
+    env_file:
+      - .env
+    volumes:
+      - $PROJECT_DIR:/go/src/$MODULE_NAME
+    ports:
+      - $SERVE_PORT:$SERVE_PORT
