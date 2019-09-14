@@ -19,9 +19,9 @@ const (
 	// in all output files, see the replacer.json config
 	replacerFilesPattern   = "*.html"
 
-    // Path to a replacer config.
-    // See README.md and replacer.go
-    // It's a file inside of a docker container.
+        // Path to a replacer config.
+        // See README.md and replacer.go
+        // It's a file inside of a docker container.
 	replacerConfigFilePath = "/app/replacer.json"
 
 	// Don't matter the port, 
